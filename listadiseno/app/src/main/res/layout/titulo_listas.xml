@@ -9,12 +9,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/bla"
-        android:id="@+id/Lamount" />
+        android:id="@+id/titulo" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/dsa"
-        android:id="@+id/Ldate" />
+        android:id="@+id/subtitulo" />
 
 </TableLayout>

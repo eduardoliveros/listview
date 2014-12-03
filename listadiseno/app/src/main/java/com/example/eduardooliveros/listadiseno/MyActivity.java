@@ -2,8 +2,6 @@ package com.example.eduardooliveros.listadiseno;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.text.Layout;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,11 +14,11 @@ import android.widget.TextView;
 
 public class MyActivity extends Activity {
 
-    TypoDatos[] datos=new TypoDatos[]{
-            new TypoDatos("uno","dos"),
-            new TypoDatos("tres","cuatro"),
-            new TypoDatos("tres1","cuatro1"),
-            new TypoDatos("seis","cinco")};
+    TipoDatos[] datos=new TipoDatos[]{
+            new TipoDatos("uno","dos"),
+            new TipoDatos("tres","cuatro"),
+            new TipoDatos("tres1","cuatro1"),
+            new TipoDatos("seis","cinco")};
     String[] datos1= new String[]{"uno","dos","tres"};
 
 
@@ -40,7 +38,7 @@ public class MyActivity extends Activity {
 
     }
 
-    class AdapterTitles extends ArrayAdapter<TypoDatos>{
+    class AdapterTitles extends ArrayAdapter<TipoDatos>{
         Activity context;
 
         public AdapterTitles(Activity context){
@@ -53,11 +51,11 @@ public class MyActivity extends Activity {
             LayoutInflater inflater= context.getLayoutInflater();
             View item=inflater.inflate(R.layout.titulo_listas,null);
 
-            TextView Amount=(TextView) item.findViewById(R.id.Lamount);
-            Amount.setText(datos[position].getAmount());
+            TextView Amount=(TextView) item.findViewById(R.id.titulo);
+            Amount.setText(datos[position].getTitulo());
 
-            TextView Date=(TextView) item.findViewById(R.id.Ldate);
-            Date.setText(datos[position].getDate());
+            TextView Date=(TextView) item.findViewById(R.id.subtitulo);
+            Date.setText(datos[position].getSubtitulo());
 
 
             return null;
